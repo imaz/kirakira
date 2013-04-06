@@ -23,4 +23,8 @@ class KirakiraKinoko
 end
 
 kirakirakinoko = KirakiraKinoko.new
-puts kirakirakinoko.get
+i = 0
+while i < 4
+  puts kirakirakinoko.get
+  i+=1
+end
