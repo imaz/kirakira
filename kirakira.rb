@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 # -*- coding: UTF-8 -*-
-puts "(((бвб)))゜＊。.。*゜'゜＊。.。*゜"
+Kinoko = '(((бвб)))'
+Kirakira = "゜＊。.。*゜'゜＊。.。*゜"
+kirakira = Kirakira.split('')
