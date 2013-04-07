@@ -24,7 +24,7 @@ end
 
 kirakirakinoko = KirakiraKinoko.new
 i = 0
-while i < 4
+while true
   puts kirakirakinoko.get
-  i+=1
+  sleep 0.3
 end
