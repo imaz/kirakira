@@ -2,12 +2,12 @@
 # -*- coding: UTF-8 -*-
 
 class KirakiraKinoko
-  Kinoko = "(((бвб)))"
-  Kirakira = "゜＊。.。*゜'゜＊。.。*゜"
-  Length = 34
+  KINOKO = "(((бвб)))"
+  KIRAKIRA = "゜＊。.。*゜'゜＊。.。*゜"
+  PRINT_LENGTH = 34
 
   def initialize
-    @@kirakira = Kirakira.split('')
+    @@kirakira = KIRAKIRA.split('')
   end
 
   def get
@@ -19,7 +19,7 @@ class KirakiraKinoko
 
   private
   def coloring_kinoko
-    "\e[37m#{Kinoko}\e[39m"
+    "\e[37m#{KINOKO}\e[39m"
   end
 
   def coloring(char)
@@ -29,6 +29,6 @@ end
 
 kirakirakinoko = KirakiraKinoko.new
 while true
-  printf "\e[#{KirakiraKinoko::Length}D" + kirakirakinoko.get
+  printf "\e[#{KirakiraKinoko::PRINT_LENGTH}D" + kirakirakinoko.get
   sleep 0.3
 end
