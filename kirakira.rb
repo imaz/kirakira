@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 class KirakiraKinoko
-  Kinoko = "\e[37m(((бвб)))\e[39m"
+  Kinoko = "(((бвб)))"
   Kirakira = "゜＊。.。*゜'゜＊。.。*゜"
 
   def initialize
@@ -10,13 +10,17 @@ class KirakiraKinoko
   end
 
   def get
-    color_kirakira = @@kirakira.map{|char|
+    coloring_kirakira = @@kirakira.map{|char|
       coloring(char)
     }
-    Kinoko + color_kirakira.join
+    coloring_kinoko + coloring_kirakira.join
   end
 
   private
+  def coloring_kinoko
+    "\e[37m#{Kinoko}\e[39m"
+  end
+
   def coloring(char)
     c = "\e[3#{rand(6)+1}m#{char}\e[39m"
   end
