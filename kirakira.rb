@@ -23,12 +23,11 @@ class KirakiraKinoko
   end
 
   def coloring(char)
-    c = "\e[3#{rand(6)+1}m#{char}\e[39m"
+    "\e[3#{rand(6)+1}m#{char}\e[39m"
   end
 end
 
 kirakirakinoko = KirakiraKinoko.new
-i = 0
 while true
   printf "\e[#{KirakiraKinoko::Length}D" + kirakirakinoko.get
   sleep 0.3
