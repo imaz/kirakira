@@ -4,6 +4,7 @@
 class KirakiraKinoko
   Kinoko = "(((бвб)))"
   Kirakira = "゜＊。.。*゜'゜＊。.。*゜"
+  Length = 34
 
   def initialize
     @@kirakira = Kirakira.split('')
@@ -29,6 +30,6 @@ end
 kirakirakinoko = KirakiraKinoko.new
 i = 0
 while true
-  puts kirakirakinoko.get
+  printf "\e[#{KirakiraKinoko::Length}D" + kirakirakinoko.get
   sleep 0.3
 end
