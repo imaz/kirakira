@@ -14,7 +14,8 @@ class KirakiraKinoko
     coloring_kirakira = @@kirakira.map{|char|
       coloring(char)
     }
-    coloring_kinoko + coloring_kirakira.join
+    @@kirakira.push @@kirakira.shift
+    coloring_kinoko + coloring_kirakira.reverse.join
   end
 
   private
@@ -30,5 +31,5 @@ end
 kirakirakinoko = KirakiraKinoko.new
 while true
   printf "\e[#{KirakiraKinoko::PRINT_LENGTH}D" + kirakirakinoko.get
-  sleep 0.3
+  sleep 0.15
 end
