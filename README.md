@@ -1,5 +1,7 @@
 ＊。.キラキラ.。＊
 
+![kirakira sample](kirakira_sample.png)
+
 ```
 $ git clone git://github.com/imaz/kirakira.git
 $ ./kirakira.rb
